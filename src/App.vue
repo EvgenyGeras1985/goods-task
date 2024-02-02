@@ -1,26 +1,25 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import MainComponent from "@/components/MainComponent.vue";
+// import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div>
-    <header>
-      <h1>hello vue 3</h1>
-    </header>
-  </div>
-  <RouterView />
+    <main>
+      <MainComponent />
+    </main>
 </template>
 
 <style scoped lang="scss">
-header {
-
+@import "@/assets/scss/styles";
+main{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
-
-@media (min-width: 1024px) {
-  header {
-
+@include breakpoint(large) {
+  main{
+    flex-direction: row;
   }
 }
-
 </style>
