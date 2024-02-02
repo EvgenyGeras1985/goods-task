@@ -6,5 +6,5 @@ module.expotrs = {
                 prependData: '@import "@/assets/scss/styles.scss"; '
             }
         }
-    }
+    },
 }

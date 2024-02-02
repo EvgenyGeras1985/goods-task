@@ -11,9 +11,11 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "@vueuse/core": "^10.7.2",
     "node-sass": "^9.0.0",
     "sass": "^1.70.0",
     "vue": "^3.4.15",
+    "vue-demi": "^0.14.7",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
