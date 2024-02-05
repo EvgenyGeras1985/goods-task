@@ -10,27 +10,27 @@ import CustomTableHead from "@/components/CustomTableHead.vue";
     <custom-table>
         <custom-table-head>
           <tr>
-            <CustomTableCell scope="col">test</CustomTableCell>
-            <CustomTableCell scope="col">test</CustomTableCell>
-            <CustomTableCell scope="col">test</CustomTableCell>
-            <CustomTableCell scope="col">test</CustomTableCell>
-            <CustomTableCell scope="col">test</CustomTableCell>
+            <CustomTableCell>test</CustomTableCell>
+            <CustomTableCell>test</CustomTableCell>
+            <CustomTableCell>test</CustomTableCell>
+            <CustomTableCell>test</CustomTableCell>
+            <CustomTableCell>test</CustomTableCell>
           </tr>
         </custom-table-head>
       <tbody>
         <tr>
-          <CustomTableCell scope="row">test</CustomTableCell>
-          <CustomTableCell scope="row">test</CustomTableCell>
-          <CustomTableCell scope="row">test</CustomTableCell>
-          <CustomTableCell scope="row">test</CustomTableCell>
-          <CustomTableCell scope="row">test</CustomTableCell>
+          <th scope="row">test</th>
+          <th scope="row">test</th>
+          <th scope="row">test</th>
+          <th scope="row">test</th>
+          <th scope="row">test</th>
         </tr>
         <tr>
-          <CustomTableCell scope="row">test</CustomTableCell>
-          <CustomTableCell scope="row">test</CustomTableCell>
-          <CustomTableCell scope="row">test</CustomTableCell>
-          <CustomTableCell scope="row">test</CustomTableCell>
-          <CustomTableCell scope="row">test</CustomTableCell>
+          <th scope="row">test</th>
+          <th scope="row">test</th>
+          <th scope="row">test</th>
+          <th scope="row">test</th>
+          <th scope="row">test</th>
         </tr>
       </tbody>
     </custom-table>

@@ -16,6 +16,7 @@ table{
   margin: 25px 0 5px;
   padding: 15px 15px 25px;
   border-radius: 10px;
+  border-collapse: collapse;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.07);
   border: solid 1px var(--pale-grey);
   background: $color-primary-white;
