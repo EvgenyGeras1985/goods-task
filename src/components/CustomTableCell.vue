@@ -1,17 +1,14 @@
 <script setup lang="ts">
 import {ref} from 'vue';
-import elemController from "@/elemManipulations/DomElemController";
+import CellController from "@/elemManipulations/DomElemController";
 
 //переменная для отслеживания клика по таблице col
-const isTableClick = ref(false);
-const element = ref<HTMLTableColElement>();
-const currentWidth = ref(10);
-const delta:number = 5;
+const element = ref<HTMLTableColElement | undefined>();
 
 </script>
 
 <template>
-  <th scope="col" ref="element" @mousemove="elemController.getBorder(element)">
+  <th scope="col" ref="element" @mousemove="CellController.getBorder(element)">
     <slot></slot>
   </th>
 </template>
@@ -19,12 +16,13 @@ const delta:number = 5;
 <style scoped lang="scss">
 @import "@/assets/scss/styles";
 th{
+  text-align: center;
   outline: 1px solid black;
 }
 @include breakpoint(large) {
   th {
     min-width: 100px;
-    max-width: 300px;
+    max-width: 200px;
     height: 44px;
     margin: 14px 14px;
     padding: 14px 14px;
