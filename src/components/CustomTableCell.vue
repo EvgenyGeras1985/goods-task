@@ -1,33 +1,18 @@
 <script setup lang="ts">
 import {ref} from 'vue';
-import {useEventListener} from "@vueuse/core";
+import elemController from "@/elemManipulations/DomElemController";
 
 //переменная для отслеживания клика по таблице col
 const isTableClick = ref(false);
 const element = ref<HTMLTableColElement>();
-
-useEventListener(element, 'mousedown', () => {
-    isTableClick.value = !isTableClick.value;
-  }
-)
-
-useEventListener(element, 'mousemove', (e) => {
-  const currentThPos :number = e.clientX;
-  isTableClick.value ?
-      element.value?.setAttribute("style", `width: ${e.clientX}px`) :
-      !isTableClick.value
-})
-
-useEventListener(element, 'mouseup', () => {
-  isTableClick.value = !isTableClick.value;
-})
-
+const currentWidth = ref(10);
+const delta:number = 5;
 
 </script>
 
 <template>
-  <th scope="col" ref="element">
-      <slot />
+  <th scope="col" ref="element" @mousemove="elemController.getBorder(element)">
+    <slot></slot>
   </th>
 </template>
 
@@ -38,8 +23,11 @@ th{
 }
 @include breakpoint(large) {
   th {
-    min-width: 10px;
+    min-width: 100px;
+    max-width: 300px;
     height: 44px;
+    margin: 14px 14px;
+    padding: 14px 14px;
   }
 }
 </style>

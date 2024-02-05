@@ -11,6 +11,7 @@
 <style scoped lang="scss">
 @import "@/assets/scss/styles";
 table{
+  table-layout: fixed;
   min-width: 355px;
   min-height: 446px;
   margin: 25px 0 5px;

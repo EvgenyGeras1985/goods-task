@@ -2,38 +2,43 @@
 import CustomTable from "@/components/CustomTable.vue";
 import CustomTableCell from "@/components/CustomTableCell.vue";
 import CustomTableHead from "@/components/CustomTableHead.vue";
+
+const test = [
+  {title: "Действие", key: 1},
+  {title: "Наименование единицы", key: 2, itemKey: "name"},
+  {title: "Цена", key: 3, itemKey: "cost"},
+  {title: "Кол-во", key: 4, itemKey: "count"},
+  {title: "Наименование товара", key: 5, itemKey: "goodsName"},
+  {title: "Итого", key: 6, itemKey: "Total"},
+  {title: "test col", key: 7, itemKey: "testColKey"},
+  {title: "test col2", key: 8, itemKey: "testColKey2"},
+]
 </script>
 
 <template>
   <div class="content">
       <p>Проведение ТО и мелкий ремонт</p>
-    <custom-table>
-        <custom-table-head>
+      <custom-table>
+          <custom-table-head>
+            <tr>
+              <custom-table-cell :testData="test" v-for="date in test" :key="date.key">
+                {{date.title}}
+              </custom-table-cell>
+            </tr>
+          </custom-table-head>
+        <tbody>
           <tr>
-            <CustomTableCell>test</CustomTableCell>
-            <CustomTableCell>test</CustomTableCell>
-            <CustomTableCell>test</CustomTableCell>
-            <CustomTableCell>test</CustomTableCell>
-            <CustomTableCell>test</CustomTableCell>
+            <th scope="row">test</th>
+            <th scope="row">test</th>
+            <th scope="row">test</th>
+            <th scope="row">test</th>
+            <th scope="row">test</th>
+            <th scope="row">test</th>
+            <th scope="row">test</th>
+            <th scope="row">test</th>
           </tr>
-        </custom-table-head>
-      <tbody>
-        <tr>
-          <th scope="row">test</th>
-          <th scope="row">test</th>
-          <th scope="row">test</th>
-          <th scope="row">test</th>
-          <th scope="row">test</th>
-        </tr>
-        <tr>
-          <th scope="row">test</th>
-          <th scope="row">test</th>
-          <th scope="row">test</th>
-          <th scope="row">test</th>
-          <th scope="row">test</th>
-        </tr>
-      </tbody>
-    </custom-table>
+        </tbody>
+      </custom-table>
   </div>
 </template>
 
