@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import CustomTable from "@/components/TableComponents/CustomTable.vue";
-import CustomTableCell from "@/components/TableComponents/CustomTableTHCell.vue";
+import CustomTableTHCell from "@/components/TableComponents/CustomTableTHCell.vue";
 import CustomTableHead from "@/components/TableComponents/CustomTableHead.vue";
+import CustomTableTDCell from "@/components/TableComponents/CustomTableTDCell.vue";
 
 const test = [
   {title: "Действие", key: 1},
@@ -33,29 +34,21 @@ const tblList =[
       <custom-table>
           <custom-table-head>
             <tr>
-              <custom-table-cell :testData="test" v-for="date in test" :key="date.key">
+              <custom-table-t-h-cell :testData="test" v-for="date in test" :key="date.key">
                 {{date.title}}
-              </custom-table-cell>
+              </custom-table-t-h-cell>
             </tr>
           </custom-table-head>
         <tbody>
-          <tr class="drop-zone">
-            <th
-                class="drop-el"
-                v-for="elem in tblList"
-                scope="row"
-                :key="elem.id"
-                draggable="true"
-                @dragstart="dragController.startDrag($event, elem, tblList)"
-            >
-              {{elem.title}}
-            </th>
+          <tr>
+            <custom-table-t-d-cell v-for="el in tblList" :key="el.id">
+              {{el.title}}
+            </custom-table-t-d-cell>
           </tr>
-          <tr class="drop-zone">
-            <th class="drop-el" scope="row" v-for="el in tblList" :key="el.id">{{el.title}}</th>
-          </tr>
-          <tr class="drop-zone">
-            <th class="drop-el" scope="row" v-for="el in tblList" :key="el.id">{{el.title}}</th>
+          <tr>
+            <custom-table-t-d-cell v-for="el in tblList" :key="el.id">
+              {{el.title}}
+            </custom-table-t-d-cell>
           </tr>
         </tbody>
       </custom-table>

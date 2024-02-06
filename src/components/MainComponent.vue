@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ContentSide from "@/components/ContentSide.vue";
 import SideBar from "@/components/SideBar.vue";
-import KitchenComponent from "@/components/testing/kitchenComponent.vue";
+import KitchenComponent from "@/components/TestComponents/kitchenComponent.vue";
 </script>
 
 <template>
